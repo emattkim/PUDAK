@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marker-Based AR - PUDAK</title>
+    <meta name="description" content="A-Frame AR with AR.js using PUDAK model." />
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+<body>
+    <a-scene embedded arjs>
+        <a-assets>
+            <a-asset-item id="pudak" src="./PUDAK.glb"></a-asset-item>
+        </a-assets>
+
+        <a-marker preset="hiro">
+            <a-gltf-model
+                src="#pudak"
+                position="0 0 0"
+                scale="0.4 0.4 0.4"
+                rotation="-90 0 0">
+            </a-gltf-model>
+        </a-marker>
+
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+</html>
